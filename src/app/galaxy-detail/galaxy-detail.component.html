@@ -1,0 +1,23 @@
+<div *ngIf="galaxy" class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <img [src]="galaxy.photo" alt="Galaxy Image" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <h5 class="card-title">Имя Галактики: {{ galaxy.name }}</h5>
+      <p class="card-text">Данные галактики: {{ galaxy.description }}</p>
+      <p class="card-text">Дистанция: {{ galaxy.distance }}</p>
+      <div class="mt-3">
+        <a [routerLink]="['/galaxies/update', galaxy._id]" class="btn btn-primary">Обновить</a>
+      </div>
+      <div class="mt-3">
+        <a [routerLink]="['/galaxies/delete', galaxy._id]" class="btn btn-danger">Удалить</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

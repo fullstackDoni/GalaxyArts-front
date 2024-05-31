@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let galaxy of galaxies">
+      <div class="card h-100">
+        <img [src]="galaxy.photo" alt="Galaxy Image" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ galaxy.name }}</h5>
+          <p class="card-text">{{ galaxy.description }}</p>
+          <p class="card-text">Distance: {{ galaxy.distance }}</p>
+          <a [routerLink]="['/galaxy-detail', galaxy._id]" class="btn btn-primary">Детально</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

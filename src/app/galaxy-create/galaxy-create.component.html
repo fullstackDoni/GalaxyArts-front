@@ -1,0 +1,22 @@
+<div class="container">
+  <form (ngSubmit)="createGalaxy()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Название</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="galaxy.name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Описание</label>
+      <textarea class="form-control" id="description" [(ngModel)]="galaxy.description" name="description"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="distance" class="form-label">Расстояние</label>
+      <input type="number" class="form-control" id="distance" [(ngModel)]="galaxy.distance" name="distance" required>
+    </div>
+    <div class="mb-3">
+      <label for="photo" class="form-label">Фото</label>
+      <input type="text" class="form-control" id="photo" [(ngModel)]="galaxy.photo" name="photo" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Создать</button>
+  </form>
+</div>
+
